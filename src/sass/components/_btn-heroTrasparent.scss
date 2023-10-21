@@ -1,0 +1,16 @@
+@import './btn-hero';
+@import '../utils/variables';
+
+.hero__button--how {
+  @extend .hero__button;
+  width: 18.3rem;
+  background: transparent;
+  border: 0.1rem solid $color-white;
+  &:focus-within,
+  &:focus,
+  &:hover {
+    color: $primary-color;
+    background: $color-white;
+    border: 0.1rem solid rgb(241, 148, 54);
+  }
+}

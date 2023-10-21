@@ -1,0 +1,71 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.reviews {
+  padding-bottom: 12.8rem;
+}
+
+.reviews__title {
+  padding-bottom: 9rem;
+}
+
+.reviews__cards-container {
+  @include flex(row, space-between, '');
+}
+
+.reviews__cards {
+  width: 35.8rem;
+  padding-bottom: 3.2rem;
+}
+
+.reviews__card {
+  position: relative;
+  img {
+    margin: 0 auto;
+    position: absolute;
+    top: -4rem;
+    left: 13.9rem;
+  }
+}
+
+.reviews__content-card {
+  width: 35.8rem;
+  height: 19.8rem;
+  background-color: $color-white;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 1.5rem;
+  box-shadow: 0px 9.049315452575684px 26.571659088134766px 0px rgba(215, 228, 249, 0.25);
+}
+.reviews__title-card {
+  padding-top: 5.8rem;
+  text-align: center;
+}
+
+.reviews__text {
+  padding-top: 2.4rem;
+  width: 31.2rem;
+  color: $text-reviews;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.reviews__carousel {
+  width: 10.6rem;
+  padding-bottom: 5rem;
+}
+
+.reviews__btn {
+  @extend .hero__button;
+  font-size: 1.8rem;
+  padding: 1.3rem 3.8rem 1.3rem 3.8rem;
+  background: transparent;
+  color: $secondary-color;
+  border: 0.1rem solid rgb(241, 148, 54);
+  display: block;
+  margin: 0 auto;
+  &:focus,
+  &:hover {
+    color: $color-white;
+    background: $primary-color;
+  }
+}

@@ -1,0 +1,33 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.products {
+  padding-bottom: 12.8rem;
+}
+
+.products__title {
+  margin-bottom: 5rem;
+}
+.products__list {
+  @include flex(row, space-between, center);
+  gap: 1.8666rem;
+  padding-bottom: 3.2rem;
+}
+
+.carousel {
+  @include flex(row, space-between, center);
+  width: 21rem;
+  margin: 0 auto;
+}
+
+.carousel__item {
+  display: block;
+  width: 1.3rem;
+  height: 1.3rem;
+  background: rgba(17, 17, 17, 0.1);
+  border-radius: 0.65rem;
+  &:first-child {
+    width: 2.8rem;
+    background: $primary-color;
+  }
+}

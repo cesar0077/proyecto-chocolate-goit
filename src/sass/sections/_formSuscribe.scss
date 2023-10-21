@@ -1,0 +1,67 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.formSubscribe {
+  width: 53.8rem;
+  border-radius: 2rem;
+  .formSubscribe__image {
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+  }
+  padding-bottom: 4rem;
+  margin-bottom: 4rem;
+}
+
+.formSubscribe__title {
+  padding-left: 4rem;
+  margin: 4rem 0 2.8rem 0;
+  text-align: left;
+  span {
+    display: block;
+    span {
+      display: inline;
+      color: $secondary-color;
+    }
+  }
+}
+
+.formSubscribe-grid {
+  @include flex(row, '', '');
+  width: 45.8rem;
+  margin-left: 4rem;
+
+  .formSubscribe__input {
+    all: unset;
+    display: block;
+    padding: 0rem 5.4rem;
+    font-size: 1.8rem;
+    border-radius: 13px;
+    border: 1.5px solid rgba(17, 17, 17, 0.05);
+    background: $bg-bodycolor;
+    color: rgba(64, 64, 64, 0.3);
+    font-weight: 400;
+    line-height: 1.222;
+    letter-spacing: -0.02em;
+    text-align: left;
+    outline: none;
+    margin-right: 0.8rem;
+    &:hover,
+    &:focus,
+    &:focus-within {
+      border: none;
+      border: 1px solid $primary-color;
+      border-radius: 1.3rem;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+
+  .formSubscribe__btn {
+    display: block;
+    @extend .hero__button;
+    width: unset;
+    padding: 1.5rem 2.7rem;
+    font-size: 1.8rem;
+    border-radius: 100px;
+  }
+}

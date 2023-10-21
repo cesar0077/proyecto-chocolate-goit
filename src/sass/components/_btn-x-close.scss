@@ -1,0 +1,16 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.buyNow__btnClose {
+  position: absolute;
+  top: 24px;
+  margin-left: 55.2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    outline: none;
+    fill: $primary-color;
+  }
+}

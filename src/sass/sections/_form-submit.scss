@@ -1,0 +1,269 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+@import '../components/btn-x-close';
+
+.buyNow {
+  position: relative;
+  width: 60.9rem;
+  margin: 0 auto;
+  padding-top: 4.8rem;
+  padding-bottom: 5.8rem;
+  border-radius: 2rem;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(253, 146, 34, 0.5);
+}
+
+.modal-send,
+.modal,
+.modal-subscribe {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.modal-send {
+  transform: scale(100%);
+  top: 35%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.modal--modifier {
+  transform: scale(88%);
+  top: -50px;
+  left: 35%;
+}
+
+.subscribe-hidden,
+.send-hidden,
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: 0;
+}
+
+.buyNow__title {
+  margin-bottom: 3.2rem;
+}
+
+.buyNow__list {
+  width: 51.3rem;
+  list-style: none;
+  @include flex(row, space-between, center);
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.buyNow__item {
+  width: 15.8rem;
+  height: 19.4rem;
+  background: $color-white;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 1.5rem;
+  .buyNow__image {
+    margin: 2.4rem 2rem 1.4rem 2rem;
+  }
+  &:nth-child(3) {
+    img {
+      margin-top: 2rem;
+    }
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.buyNow__btn {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 8px 27px 8px 27px;
+  border-radius: 100px;
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid $primary-color;
+  }
+}
+
+.form {
+  padding: 0 4.8rem 4.8rem 4.8rem;
+}
+
+.form__inputs {
+  @include flex('', '', '');
+  box-shadow: 0px 5.444915294647217px 5.444915294647217px 0px rgba(0, 0, 0, 0.03);
+  margin-bottom: 1.5rem;
+}
+
+.form__inputs--grid {
+  @include flex(row, space-between, center);
+  margin-bottom: 1.5rem;
+}
+
+.form__title {
+  margin-bottom: 0.7rem;
+}
+
+input[type='email'],
+input[type='number'] {
+  flex: 1;
+}
+
+.form__span--svg {
+  display: block;
+  @include flex(row, left, center);
+  padding-right: 32px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.222;
+  letter-spacing: -0.02em;
+  border-right: 2px solid rgba(17, 17, 17, 0.2);
+  margin-right: 2rem;
+  .form__icon {
+    margin-right: 1.5rem;
+  }
+}
+
+.form__input {
+  display: 'inline-block';
+  background: $bg-bodycolor;
+}
+
+.form__inputs--visa {
+  @include flex(row, space-between, center);
+  .form__input {
+    border-right: none;
+    flex: 1;
+  }
+}
+
+.form__icon--visa {
+  margin-right: 0 !important;
+}
+
+.form__inputs--svg .form__input {
+  display: inline-block;
+  width: 23.7rem;
+  height: 2.4rem;
+  border-radius: 0.4rem;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+.form__inputs--svg .modal__icon {
+  margin: 0rem 1.8rem 0 0;
+}
+
+.form__input,
+.form__inputs--svg,
+.form__inputs--visa {
+  &:hover,
+  &:focus,
+  &:focus-within {
+    border: none;
+    border: 1px solid $primary-color;
+    border-radius: 1.3rem;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+.form__input--svg {
+  &:hover,
+  &:focus,
+  &:focus-within {
+    border: none;
+    border-radius: 1.3rem;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+.form__textarea {
+  width: 46.3rem;
+  height: 9.1rem;
+  padding: 2.2rem 2.4rem;
+  background: $bg-bodycolor;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  box-shadow: 0px 5.444915294647217px 5.444915294647217px 0px rgba(0, 0, 0, 0.03);
+  background: $bg-bodycolor;
+  color: rgba(64, 64, 64, 0.3);
+  border-radius: 13px;
+  margin: 0;
+  outline: none;
+  resize: none;
+  font-size: 1.8rem;
+  line-height: 1.222;
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.form__submit {
+  @extend .hero__button;
+  width: unset;
+  padding: 14px 43.83px;
+}
+
+.form__textarea {
+  &:hover,
+  &:focus,
+  &:focus-within {
+    border: none;
+    border: 1px solid $primary-color;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+.buyNow-send {
+  width: 51.7rem;
+  position: relative;
+  padding-top: 4.8rem;
+  padding-bottom: 4.8rem !important;
+  border-radius: 2rem;
+  margin: 12.8rem auto;
+}
+
+.buyNow__title--modifier {
+  text-align: left;
+  margin-left: 4rem;
+  span {
+    display: block;
+  }
+}
+
+.form--send {
+  padding: 0 4rem 0 4rem !important;
+  input[type='text'] {
+    flex: 1;
+  }
+}
+
+.form__textarea--width {
+  display: block;
+  width: 38.7rem !important;
+}
+.form__submit--modifier {
+  padding: 14px 42.67px;
+}
+
+.buyNow__btnClose--modifier {
+  @extend .buyNow__btnClose;
+  display: block;
+  margin-left: 46rem !important;
+}

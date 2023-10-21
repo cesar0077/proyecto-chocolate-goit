@@ -1,0 +1,27 @@
+.hero {
+  background-image: url('../images/hero.jpg'),
+    linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.4) 100%);
+  max-width: 113.6rem;
+  height: 60rem;
+  margin: 0 auto;
+  border-radius: 3rem;
+}
+
+.hero__content {
+  position: relative;
+  padding: 38.8rem 4rem 4rem 4rem;
+}
+
+.hero__heading {
+  color: $color-white;
+  margin-bottom: 3.2rem;
+}
+
+.hero__btns {
+  @include flex(row, space-between, center);
+}
+
+.hero__btn {
+  @include flex(row, '', '');
+  gap: 1.4rem;
+}

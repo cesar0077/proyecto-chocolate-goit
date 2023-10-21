@@ -1,0 +1,38 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.subscribe {
+  background-image: url(../images/Subscribe.jpg);
+  height: 37rem;
+}
+
+.subscribe__content {
+  width: 47.7rem;
+  margin: 0 36.6rem;
+  padding-top: 7.2rem;
+  text-align: center;
+  color: $color-white;
+}
+
+.subscribe__title {
+  span {
+    display: block;
+  }
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.subscribe__text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2857;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin: 0 0 2.4rem 0;
+}
+
+.subscribe__btn {
+  @extend .hero__button;
+  font-size: 1.8rem;
+  padding: 1.4rem 1.4rem;
+}

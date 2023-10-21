@@ -1,0 +1,14 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.form__inputs--svg {
+  @include flex('', '', center);
+  flex: 1;
+  font-size: 1.8rem;
+  padding: 21.67px 22px;
+  border-radius: 13px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  box-shadow: 0px 5.444915294647217px 5.444915294647217px rgba(0, 0, 0, 0.03);
+  margin-bottom: 1.5rem;
+  outline: none;
+}

@@ -1,0 +1,94 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+@import '../components/text';
+
+.footer {
+  padding-top: 5rem;
+  background: $bg-footercolor;
+  margin-bottom: 12.8rem;
+}
+
+.footer__grid {
+  height: 6.8rem;
+  @include flex(row, left, '');
+  padding-bottom: 6.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__title {
+  width: 29rem;
+  letter-spacing: 0.02em;
+  color: $color-white;
+  text-align: left;
+  margin-right: 55.3rem;
+}
+
+.footer__contact {
+  width: 29.3rem;
+  @include flex(row, space-between, center);
+}
+
+.footer__list-icon {
+  @include flex(row, left, start);
+  gap: 2rem;
+}
+
+.footer__list {
+  height: 6.8rem;
+  list-style: none;
+}
+
+.footer__item {
+  &:nth-child(1) {
+    a {
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+  }
+  &:nth-child(2) {
+    a {
+      margin-bottom: 0.4rem;
+    }
+  }
+}
+
+.footer__link {
+  display: block;
+  color: $color-white;
+  font-size: 1.4rem;
+  outline: none;
+  &:focus,
+  &:focus-within {
+    border: 0.05rem solid $primary-color;
+  }
+}
+
+.footer__list-icon {
+  list-style: none;
+  .iconsHeader__icon {
+    fill: $color-white;
+    &:hover {
+      fill: $primary-color;
+    }
+  }
+}
+
+.footer__list-menu {
+  width: 53.2rem;
+  @include flex(row, space-between, center);
+  padding: 2.4rem 0 5rem 3.2rem;
+  list-style: none;
+}
+
+.footer__link-menu {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.428rem;
+  letter-spacing: -0.02em;
+  color: $color-white;
+  outline: none;
+  &:focus,
+  &:focus-within {
+    border: 0.05rem solid $primary-color;
+  }
+}
