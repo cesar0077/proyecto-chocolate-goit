@@ -3,66 +3,60 @@
 
 .product {
   margin: 12.8rem 0;
-}
-.product__container {
-  @include flex(column, center, center);
-}
+  .product__container {
+    @include flex(column, center, center);
+    .product__content {
+      @include flex(column, center, '');
+      width: 48.6rem;
+      margin-bottom: 5rem;
 
-.product__content {
-  @include flex(column, center, '');
-  width: 48.6rem;
-  margin-bottom: 5rem;
-}
+      .product__title {
+        @extend h2;
+        .product__span {
+          display: block;
+          @extend h2;
+          .product__span--two {
+            color: $primary-color;
+          }
+        }
+      }
 
-.product__title {
-  @extend h2;
-  .product__span {
-    display: block;
-    @extend h2;
-    .product__span--two {
-      color: $primary-color;
+      .product__text {
+        @extend p;
+        text-align: center;
+        font-size: 1.6rem;
+        margin: 2.8rem 0 0 0;
+      }
     }
   }
-}
-
-.product__text {
-  @extend p;
-  text-align: center;
-  font-size: 1.6rem;
-  margin: 2.8rem 0 0 0;
-}
-
-.cards_product {
-  @include flex(row, space-between, center);
 }
 
 .product__list {
   @include flex(row, space-between, center);
   gap: 1.86666rem;
   list-style: none;
-}
-
-.product__item {
-  flex-basis: calc(23.7673%);
-  background: $primary-color;
-  padding: 2.8rem 3.6rem 2.8rem 0;
-  border-radius: 1.5rem;
-  &:nth-child(even) {
-    background: $color-white;
-    &:hover,
-    &:focus,
-    &:focus-within {
-      border: 0.1rem solid $primary-color;
-    }
-  }
-
-  .product__image {
+  .product__item {
+    flex-basis: calc(23.7673%);
     background: $primary-color;
-    margin-left: 2.8rem;
-  }
+    padding: 2.8rem 3.6rem 2.8rem 0;
+    border-radius: 1.5rem;
+    &:nth-child(even) {
+      background: $color-white;
+      &:hover,
+      &:focus,
+      &:focus-within {
+        border: 0.1rem solid $primary-color;
+      }
+    }
 
-  .product__title-card {
-    margin-top: 3.6rem;
-    padding-left: 1.8rem;
+    .product__image {
+      background: $primary-color;
+      margin-left: 2.8rem;
+    }
+
+    .product__title-card {
+      margin-top: 3.6rem;
+      padding-left: 1.8rem;
+    }
   }
 }

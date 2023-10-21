@@ -1,15 +1,5 @@
 @import '../utils/variables';
 @import '../utils/mixins';
-.hero__link-span {
-  position: relative;
-  display: inline-block;
-  width: 3.8rem;
-  height: 3.8rem;
-  background-color: $color-white;
-  border-radius: 2.5rem;
-  margin-left: 1.4rem;
-  transition: border 0.25s $cubic-bezier;
-}
 .hero__link {
   @include flex(row, left, center);
   color: $color-white;
@@ -20,8 +10,18 @@
   text-align: left;
   outline: none;
   transition: background 0.25s $cubic-bezier;
-  .hero__icon {
-    fill: $primary-color;
+  .hero__link-span {
+    position: relative;
+    display: inline-block;
+    width: 3.8rem;
+    height: 3.8rem;
+    background-color: $color-white;
+    border-radius: 2.5rem;
+    margin-left: 1.4rem;
+    transition: border 0.25s $cubic-bezier;
+    .hero__icon {
+      fill: $primary-color;
+    }
   }
   &:focus,
   &:focus-within,

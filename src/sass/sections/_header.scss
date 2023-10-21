@@ -21,24 +21,23 @@
     color: $secondary-color;
     margin-right: 18rem;
   }
+
   .navbar {
     margin-right: 11rem;
-  }
-
-  .navbar__list {
-    list-style: none;
-    flex-basis: calc(50440%);
-    @include flex(row, left, center);
-    margin-right: 2rem !important;
-    &:nth-child(5) {
-      a {
-        margin-right: 0;
+    .navbar__list {
+      list-style: none;
+      flex-basis: calc(50440%);
+      @include flex(row, left, center);
+      margin-right: 2rem !important;
+      &:nth-child(5) {
+        a {
+          margin-right: 0;
+        }
+      }
+      .navbar__item {
+        display: flex;
       }
     }
-  }
-
-  .navbar__item {
-    display: flex;
   }
 
   .navbar__link {

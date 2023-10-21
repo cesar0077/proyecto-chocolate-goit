@@ -1,0 +1,21 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.footer__list-menu {
+  width: 53.2rem;
+  @include flex(row, space-between, center);
+  padding: 2.4rem 0 5rem 3.2rem;
+  list-style: none;
+  .footer__link-menu {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.428rem;
+    letter-spacing: -0.02em;
+    color: $color-white;
+    outline: none;
+    &:focus,
+    &:focus-within {
+      border: 0.05rem solid $primary-color;
+    }
+  }
+}

@@ -47,7 +47,7 @@ h1 span {
   display: block;
 }
 
-h2, .product__title .product__span, .product__title {
+h2, .product .product__container .product__content .product__title .product__span, .product .product__container .product__content .product__title {
   font-size: 2.4rem;
   color: rgb(17, 17, 17);
   font-weight: 600;
@@ -55,7 +55,7 @@ h2, .product__title .product__span, .product__title {
   letter-spacing: -0.03em;
   text-align: center;
 }
-h2 span, .product__title .product__span span, .product__title span {
+h2 span, .product .product__container .product__content .product__title .product__span span, .product .product__container .product__content .product__title span {
   color: rgb(253, 146, 34);
 }
 
@@ -82,8 +82,8 @@ h4 span {
 
 h1,
 h2,
-.product__title .product__span,
-.product__title,
+.product .product__container .product__content .product__title .product__span,
+.product .product__container .product__content .product__title,
 h3,
 h4 {
   margin: 0;
@@ -135,7 +135,7 @@ img {
 .header__container .navbar {
   margin-right: 11rem;
 }
-.header__container .navbar__list {
+.header__container .navbar .navbar__list {
   list-style: none;
   flex-basis: 50440%;
   display: flex;
@@ -144,10 +144,10 @@ img {
   align-items: center;
   margin-right: 2rem !important;
 }
-.header__container .navbar__list:nth-child(5) a {
+.header__container .navbar .navbar__list:nth-child(5) a {
   margin-right: 0;
 }
-.header__container .navbar__item {
+.header__container .navbar .navbar__list .navbar__item {
   display: flex;
 }
 .header__container .navbar__link {
@@ -191,25 +191,21 @@ img {
   margin: 0 auto;
   border-radius: 3rem;
 }
-
-.hero__content {
+.hero .hero__content {
   position: relative;
   padding: 38.8rem 4rem 4rem 4rem;
 }
-
-.hero__heading {
+.hero .hero__content .hero__heading {
   color: rgb(255, 255, 255);
   margin-bottom: 3.2rem;
 }
-
-.hero__btns {
+.hero .hero__content .hero__btns {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-
-.hero__btn {
+.hero .hero__content .hero__btns .hero__btn {
   display: flex;
   flex-direction: row;
   justify-content: "";
@@ -217,23 +213,12 @@ img {
   gap: 1.4rem;
 }
 
-p, .sellers__text, .product__text, .service__text {
+p, .sellers__content .sellers__text, .product .product__container .product__content .product__text, .service .service__flex .service__card .service__text {
   font-size: 1.4remx;
   font-weight: 400;
   line-height: 1.2857;
   letter-spacing: -0.02em;
   text-align: left;
-}
-
-.hero__link-span {
-  position: relative;
-  display: inline-block;
-  width: 3.8rem;
-  height: 3.8rem;
-  background-color: rgb(255, 255, 255);
-  border-radius: 2.5rem;
-  margin-left: 1.4rem;
-  transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero__link {
@@ -250,7 +235,17 @@ p, .sellers__text, .product__text, .service__text {
   outline: none;
   transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.hero__link .hero__icon {
+.hero__link .hero__link-span {
+  position: relative;
+  display: inline-block;
+  width: 3.8rem;
+  height: 3.8rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2.5rem;
+  margin-left: 1.4rem;
+  transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero__link .hero__link-span .hero__icon {
   fill: rgb(253, 146, 34);
 }
 .hero__link:focus, .hero__link:focus-within, .hero__link:hover {
@@ -269,7 +264,7 @@ p, .sellers__text, .product__text, .service__text {
   top: 8px;
 }
 
-.hero__button, .formSubscribe-grid .formSubscribe__btn, .form__submit, .subscribe__btn, .reviews__btn, .hero__button--how {
+.hero__button, .formSubscribe-grid .formSubscribe__btn, .form__textareas .form__submit, .subscribe .subscribe__content .subscribe__btn, .reviews__btn, .hero__button--how {
   width: 14.4rem;
   background-color: rgb(253, 146, 34);
   border: none;
@@ -285,12 +280,12 @@ p, .sellers__text, .product__text, .service__text {
   outline: none;
   transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.hero__button:focus, .formSubscribe-grid .formSubscribe__btn:focus, .form__submit:focus, .subscribe__btn:focus, .reviews__btn:focus, .hero__button--how:focus, .hero__button:hover, .formSubscribe-grid .formSubscribe__btn:hover, .form__submit:hover, .subscribe__btn:hover, .reviews__btn:hover, .hero__button--how:hover {
+.hero__button:focus, .formSubscribe-grid .formSubscribe__btn:focus, .form__textareas .form__submit:focus, .subscribe .subscribe__content .subscribe__btn:focus, .reviews__btn:focus, .hero__button--how:focus, .hero__button:hover, .formSubscribe-grid .formSubscribe__btn:hover, .form__textareas .form__submit:hover, .subscribe .subscribe__content .subscribe__btn:hover, .reviews__btn:hover, .hero__button--how:hover {
   background: rgb(252, 241, 224);
   color: rgb(253, 146, 34);
 }
 
-.hero__button, .formSubscribe-grid .formSubscribe__btn, .form__submit, .subscribe__btn, .reviews__btn, .hero__button--how {
+.hero__button, .formSubscribe-grid .formSubscribe__btn, .form__textareas .form__submit, .subscribe .subscribe__content .subscribe__btn, .reviews__btn, .hero__button--how {
   width: 14.4rem;
   background-color: rgb(253, 146, 34);
   border: none;
@@ -306,7 +301,7 @@ p, .sellers__text, .product__text, .service__text {
   outline: none;
   transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.hero__button:focus, .formSubscribe-grid .formSubscribe__btn:focus, .form__submit:focus, .subscribe__btn:focus, .reviews__btn:focus, .hero__button--how:focus, .hero__button:hover, .formSubscribe-grid .formSubscribe__btn:hover, .form__submit:hover, .subscribe__btn:hover, .reviews__btn:hover, .hero__button--how:hover {
+.hero__button:focus, .formSubscribe-grid .formSubscribe__btn:focus, .form__textareas .form__submit:focus, .subscribe .subscribe__content .subscribe__btn:focus, .reviews__btn:focus, .hero__button--how:focus, .hero__button:hover, .formSubscribe-grid .formSubscribe__btn:hover, .form__textareas .form__submit:hover, .subscribe .subscribe__content .subscribe__btn:hover, .reviews__btn:hover, .hero__button--how:hover {
   background: rgb(252, 241, 224);
   color: rgb(253, 146, 34);
 }
@@ -322,7 +317,7 @@ p, .sellers__text, .product__text, .service__text {
   border: 0.1rem solid rgb(241, 148, 54);
 }
 
-p, .sellers__text, .product__text, .service__text {
+p, .sellers__content .sellers__text, .product .product__container .product__content .product__text, .service .service__flex .service__card .service__text {
   font-size: 1.4remx;
   font-weight: 400;
   line-height: 1.2857;
@@ -335,8 +330,7 @@ p, .sellers__text, .product__text, .service__text {
   background: rgb(30, 24, 35);
   padding: 5rem;
 }
-
-.service__flex {
+.service .service__flex {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -345,15 +339,13 @@ p, .sellers__text, .product__text, .service__text {
   -moz-column-gap: 6.1rem;
        column-gap: 6.1rem;
 }
-
-.service__card {
+.service .service__flex .service__card {
   flex-basis: 29.636363%;
   padding-right: 1.8rem;
   color: rgb(255, 255, 255);
   position: relative;
 }
-
-.service__link {
+.service .service__flex .service__card .service__link {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -364,47 +356,28 @@ p, .sellers__text, .product__text, .service__text {
   border-radius: 5rem;
   margin-bottom: 2rem;
 }
-.service__link:hover, .service__link:focus {
+.service .service__flex .service__card .service__link:hover, .service .service__flex .service__card .service__link:focus {
   border: 0.1rem solid rgb(253, 146, 34);
 }
-
-.service__pseudoBarra {
-  position: relative;
+.service .service__flex .service__card .service__title {
+  margin-bottom: 2rem;
 }
-.service__pseudoBarra::after {
-  content: "";
-  position: absolute;
-  width: 12.4rem;
-  height: 0.1rem;
-  background-color: rgba(255, 255, 255, 0.7);
-  top: 4rem;
-  left: -12.5rem;
-  border-radius: 0.2rem;
-  transform: rotate(-90deg);
-}
-
-.service__text {
+.service .service__flex .service__card .service__text {
   line-height: 1.2192;
   color: rgba(255, 255, 255, 0.7);
   font-size: 1.6rem;
 }
 
-.service__title {
-  margin-bottom: 2rem;
-}
-
 .product {
   margin: 12.8rem 0;
 }
-
-.product__container {
+.product .product__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-.product__content {
+.product .product__container .product__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -412,25 +385,16 @@ p, .sellers__text, .product__text, .service__text {
   width: 48.6rem;
   margin-bottom: 5rem;
 }
-
-.product__title .product__span {
+.product .product__container .product__content .product__title .product__span {
   display: block;
 }
-.product__title .product__span .product__span--two {
+.product .product__container .product__content .product__title .product__span .product__span--two {
   color: rgb(253, 146, 34);
 }
-
-.product__text {
+.product .product__container .product__content .product__text {
   text-align: center;
   font-size: 1.6rem;
   margin: 2.8rem 0 0 0;
-}
-
-.cards_product {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .product__list {
@@ -441,29 +405,28 @@ p, .sellers__text, .product__text, .service__text {
   gap: 1.86666rem;
   list-style: none;
 }
-
-.product__item {
+.product__list .product__item {
   flex-basis: 23.7673%;
   background: rgb(253, 146, 34);
   padding: 2.8rem 3.6rem 2.8rem 0;
   border-radius: 1.5rem;
 }
-.product__item:nth-child(even) {
+.product__list .product__item:nth-child(even) {
   background: rgb(255, 255, 255);
 }
-.product__item:nth-child(even):hover, .product__item:nth-child(even):focus, .product__item:nth-child(even):focus-within {
+.product__list .product__item:nth-child(even):hover, .product__list .product__item:nth-child(even):focus, .product__list .product__item:nth-child(even):focus-within {
   border: 0.1rem solid rgb(253, 146, 34);
 }
-.product__item .product__image {
+.product__list .product__item .product__image {
   background: rgb(253, 146, 34);
   margin-left: 2.8rem;
 }
-.product__item .product__title-card {
+.product__list .product__item .product__title-card {
   margin-top: 3.6rem;
   padding-left: 1.8rem;
 }
 
-p, .sellers__text, .service__text, .product__text {
+p, .sellers__content .sellers__text, .service .service__flex .service__card .service__text, .product .product__container .product__content .product__text {
   font-size: 1.4remx;
   font-weight: 400;
   line-height: 1.2857;
@@ -474,17 +437,15 @@ p, .sellers__text, .service__text, .product__text {
 .taste {
   padding-bottom: 12.8rem;
 }
-
-.taste__container {
+.taste .taste__title {
+  margin-bottom: 5rem;
+}
+.taste .taste__container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-}
-
-.taste__title {
-  margin-bottom: 5rem;
 }
 
 .taste__content {
@@ -493,20 +454,17 @@ p, .sellers__text, .service__text, .product__text {
   background: rgb(255, 255, 255);
   border-radius: 1.6rem;
 }
-
-.taste__title-h3 {
+.taste__content .taste__title-h3 {
   margin-bottom: 3.2rem;
 }
-.taste__title-h3 .taste__title--span {
+.taste__content .taste__title-h3 .taste__title--span {
   display: block;
 }
-
-.taste__list {
+.taste__content .taste__list {
   padding-left: 1.6rem;
   width: 42.5rem;
 }
-
-.taste__item {
+.taste__content .taste__list .taste__item {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.2857;
@@ -515,19 +473,17 @@ p, .sellers__text, .service__text, .product__text {
   color: rgb(17, 17, 17);
   margin-bottom: 2rem;
 }
-.taste__item:nth-child(5) {
+.taste__content .taste__list .taste__item:nth-child(5) {
   margin-bottom: 0;
 }
 
 .products {
   padding-bottom: 12.8rem;
 }
-
-.products__title {
+.products .products__title {
   margin-bottom: 5rem;
 }
-
-.products__list {
+.products .products__list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -536,51 +492,7 @@ p, .sellers__text, .service__text, .product__text {
   padding-bottom: 3.2rem;
 }
 
-.carousel {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 21rem;
-  margin: 0 auto;
-}
-
-.carousel__item {
-  display: block;
-  width: 1.3rem;
-  height: 1.3rem;
-  background: rgba(17, 17, 17, 0.1);
-  border-radius: 0.65rem;
-}
-.carousel__item:first-child {
-  width: 2.8rem;
-  background: rgb(253, 146, 34);
-}
-
-.products__list {
-  list-style: none;
-  text-align: center;
-  display: flex;
-}
-
-.products__item {
-  flex-basis: 23.7676%;
-  background: rgb(255, 255, 255);
-  border-radius: 1.5rem;
-  text-align: center;
-  padding: 3.2rem 0;
-}
-
-.products__image {
-  margin: 0 auto;
-  margin-bottom: 0.8rem;
-}
-
-.products__title-card {
-  text-align: center;
-}
-
-.products__text {
+.products .products__text {
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.166;
@@ -588,18 +500,37 @@ p, .sellers__text, .service__text, .product__text {
   text-align: center;
   margin: 0.2rem 0 1.8rem 0;
 }
-
-.products__btn {
+.products .products__btn {
   padding: 0.8rem 1.95rem;
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 10rem;
   outline: none;
 }
-.products__btn:focus, .products__btn:focus-within {
+.products .products__btn:focus, .products .products__btn:focus-within {
   border: 0.05rem solid rgb(253, 146, 34);
 }
 
-p, .sellers__text, .service__text, .product__text {
+.products__list {
+  list-style: none;
+  text-align: center;
+  display: flex;
+}
+.products__list .products__item {
+  flex-basis: 23.7676%;
+  background: rgb(255, 255, 255);
+  border-radius: 1.5rem;
+  text-align: center;
+  padding: 3.2rem 0;
+}
+.products__list .products__item .products__image {
+  margin: 0 auto;
+  margin-bottom: 0.8rem;
+}
+.products__list .products__item .products__title-card {
+  text-align: center;
+}
+
+p, .sellers__content .sellers__text, .service .service__flex .service__card .service__text, .product .product__container .product__content .product__text {
   font-size: 1.4remx;
   font-weight: 400;
   line-height: 1.2857;
@@ -610,12 +541,10 @@ p, .sellers__text, .service__text, .product__text {
 .sellers {
   padding-bottom: 12.8rem;
 }
-
-.sellers__title {
+.sellers .sellers__title {
   margin-bottom: 5rem;
 }
-
-.sellers__list {
+.sellers .sellers__list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -631,13 +560,11 @@ p, .sellers__text, .service__text, .product__text {
   justify-content: space-between;
   align-items: center;
 }
-
-.sellers__text {
+.sellers__content .sellers__text {
   width: 40.7rem;
   margin: 0;
 }
-
-.sellers__btn {
+.sellers__content .sellers__btn {
   background-color: rgb(253, 146, 34);
   border: none;
   padding: 1.4rem 4.59rem;
@@ -652,7 +579,7 @@ p, .sellers__text, .service__text, .product__text {
   cursor: pointer;
   transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.sellers__btn:focus, .sellers__btn:hover {
+.sellers__content .sellers__btn:focus, .sellers__content .sellers__btn:hover {
   background: rgb(252, 241, 224);
   color: rgb(253, 146, 34);
 }
@@ -660,8 +587,7 @@ p, .sellers__text, .service__text, .product__text {
 .reviews {
   padding-bottom: 12.8rem;
 }
-
-.reviews__title {
+.reviews .reviews__title {
   padding-bottom: 9rem;
 }
 
@@ -671,16 +597,14 @@ p, .sellers__text, .service__text, .product__text {
   justify-content: space-between;
   align-items: "";
 }
-
-.reviews__cards {
+.reviews__cards-container .reviews__cards {
   width: 35.8rem;
   padding-bottom: 3.2rem;
 }
-
-.reviews__card {
+.reviews__cards-container .reviews__cards .reviews__card {
   position: relative;
 }
-.reviews__card img {
+.reviews__cards-container .reviews__cards .reviews__card img {
   margin: 0 auto;
   position: absolute;
   top: -4rem;
@@ -695,23 +619,16 @@ p, .sellers__text, .service__text, .product__text {
   border-radius: 1.5rem;
   box-shadow: 0px 9.0493154526px 26.5716590881px 0px rgba(215, 228, 249, 0.25);
 }
-
-.reviews__title-card {
+.reviews__content-card .reviews__title-card {
   padding-top: 5.8rem;
   text-align: center;
 }
-
-.reviews__text {
+.reviews__content-card .reviews__text {
   padding-top: 2.4rem;
   width: 31.2rem;
   color: rgba(17, 17, 17, 0.7);
   text-align: center;
   margin: 0 auto;
-}
-
-.reviews__carousel {
-  width: 10.6rem;
-  padding-bottom: 5rem;
 }
 
 .reviews__btn {
@@ -732,11 +649,10 @@ p, .sellers__text, .service__text, .product__text {
   width: 35.8rem;
   padding-bottom: 3.2rem;
 }
-
-.reviews__card {
+.reviews__cards .reviews__card {
   position: relative;
 }
-.reviews__card img {
+.reviews__cards .reviews__card img {
   margin: 0 auto;
   position: absolute;
   top: -4rem;
@@ -751,13 +667,11 @@ p, .sellers__text, .service__text, .product__text {
   border-radius: 1.5rem;
   box-shadow: 0px 9.0493154526px 26.5716590881px 0px rgba(215, 228, 249, 0.25);
 }
-
-.reviews__title-card {
+.reviews__content-card .reviews__title-card {
   padding-top: 5.8rem;
   text-align: center;
 }
-
-.reviews__text {
+.reviews__content-card .reviews__title-card .reviews__text {
   padding-top: 2.4rem;
   width: 31.2rem;
   color: rgba(17, 17, 17, 0.7);
@@ -768,24 +682,21 @@ p, .sellers__text, .service__text, .product__text {
   background-image: url(../images/Subscribe.jpg);
   height: 37rem;
 }
-
-.subscribe__content {
+.subscribe .subscribe__content {
   width: 47.7rem;
   margin: 0 36.6rem;
   padding-top: 7.2rem;
   text-align: center;
   color: rgb(255, 255, 255);
 }
-
-.subscribe__title {
+.subscribe .subscribe__content .subscribe__title {
   text-align: center;
   margin-bottom: 2.4rem;
 }
-.subscribe__title span {
+.subscribe .subscribe__content .subscribe__title span {
   display: block;
 }
-
-.subscribe__text {
+.subscribe .subscribe__content .subscribe__text {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.2857;
@@ -793,13 +704,12 @@ p, .sellers__text, .service__text, .product__text {
   text-align: center;
   margin: 0 0 2.4rem 0;
 }
-
-.subscribe__btn {
+.subscribe .subscribe__content .subscribe__btn {
   font-size: 1.8rem;
   padding: 1.4rem 1.4rem;
 }
 
-p, .service__text, .product__text, .sellers__text {
+p, .service .service__flex .service__card .service__text, .product .product__container .product__content .product__text, .sellers__content .sellers__text {
   font-size: 1.4remx;
   font-weight: 400;
   line-height: 1.2857;
@@ -810,10 +720,9 @@ p, .service__text, .product__text, .sellers__text {
 .footer {
   padding-top: 5rem;
   background: rgb(30, 24, 35);
-  margin-bottom: 12.8rem;
+  margin-bottom: 4rem;
 }
-
-.footer__grid {
+.footer .footer__grid {
   height: 6.8rem;
   display: flex;
   flex-direction: row;
@@ -822,21 +731,40 @@ p, .service__text, .product__text, .sellers__text {
   padding-bottom: 6.2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-
-.footer__title {
+.footer .footer__grid .footer__title {
   width: 29rem;
   letter-spacing: 0.02em;
   color: rgb(255, 255, 255);
   text-align: left;
   margin-right: 55.3rem;
 }
-
-.footer__contact {
+.footer .footer__grid .footer__contact {
   width: 29.3rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.footer__list {
+  height: 6.8rem;
+  list-style: none;
+}
+.footer__list .footer__item .footer__link {
+  display: block;
+  color: rgb(255, 255, 255);
+  font-size: 1.4rem;
+  outline: none;
+}
+.footer__list .footer__item .footer__link:focus, .footer__list .footer__item .footer__link:focus-within {
+  border: 0.05rem solid rgb(253, 146, 34);
+}
+.footer__list .footer__item:nth-child(1) a {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.footer__list .footer__item:nth-child(2) a {
+  margin-bottom: 0.4rem;
 }
 
 .footer__list-icon {
@@ -845,32 +773,6 @@ p, .service__text, .product__text, .sellers__text {
   justify-content: left;
   align-items: start;
   gap: 2rem;
-}
-
-.footer__list {
-  height: 6.8rem;
-  list-style: none;
-}
-
-.footer__item:nth-child(1) a {
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-.footer__item:nth-child(2) a {
-  margin-bottom: 0.4rem;
-}
-
-.footer__link {
-  display: block;
-  color: rgb(255, 255, 255);
-  font-size: 1.4rem;
-  outline: none;
-}
-.footer__link:focus, .footer__link:focus-within {
-  border: 0.05rem solid rgb(253, 146, 34);
-}
-
-.footer__list-icon {
   list-style: none;
 }
 .footer__list-icon .iconsHeader__icon {
@@ -880,45 +782,10 @@ p, .service__text, .product__text, .sellers__text {
   fill: rgb(253, 146, 34);
 }
 
-.footer__list-menu {
-  width: 53.2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2.4rem 0 5rem 3.2rem;
-  list-style: none;
-}
-
-.footer__link-menu {
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 1.428rem;
-  letter-spacing: -0.02em;
-  color: rgb(255, 255, 255);
-  outline: none;
-}
-.footer__link-menu:focus, .footer__link-menu:focus-within {
-  border: 0.05rem solid rgb(253, 146, 34);
-}
-
 .product__item {
   position: relative;
   overflow: hidden;
 }
-
-.productModal {
-  position: absolute;
-  width: 27rem;
-  height: 27rem;
-  background: rgb(255, 255, 255);
-  border-radius: 15px;
-  left: 0;
-  top: 100%;
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
-}
-
 .product__item:hover {
   box-shadow: 0rem 0.35rem 1.5rem rgba(0, 0, 0, 0.4);
 }
@@ -938,7 +805,18 @@ p, .service__text, .product__text, .sellers__text {
   outline: none;
 }
 
-.productModal__title {
+.productModal {
+  position: absolute;
+  width: 27rem;
+  height: 27rem;
+  background: rgb(255, 255, 255);
+  border-radius: 15px;
+  left: 0;
+  top: 100%;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+.productModal .productModal__title {
   width: 21.4rem;
   font-family: Montserrat;
   font-size: 1.8rem;
@@ -948,8 +826,17 @@ p, .service__text, .product__text, .sellers__text {
   text-align: left;
   padding: 2rem 0rem 0.8rem 2rem;
 }
-
-.productModal__btn {
+.productModal .productModal__text {
+  width: 23rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin: 0;
+  padding: 0 2rem 2rem 2rem;
+}
+.productModal .productModal__btn {
   background-color: rgb(253, 146, 34);
   border: none;
   margin: 0rem 0.6rem 1.4rem 2rem;
@@ -962,12 +849,11 @@ p, .service__text, .product__text, .sellers__text {
   letter-spacing: 0em;
   text-align: center;
 }
-.productModal__btn:hover {
+.productModal .productModal__btn:hover {
   background: rgb(252, 241, 224);
   color: rgb(17, 17, 17);
 }
-
-.productModal__btn--modifier {
+.productModal .productModal__btn .productModal__btn--modifier {
   width: 9.1rem;
   height: 2.2rem;
   background: rgb(252, 241, 224);
@@ -976,23 +862,12 @@ p, .service__text, .product__text, .sellers__text {
   padding: 0;
   margin: 0;
 }
-.productModal__btn--modifier:hover {
+.productModal .productModal__btn .productModal__btn--modifier:hover {
   background: rgb(255, 255, 255);
   color: rgb(253, 146, 34);
 }
 
-.productModal__text {
-  width: 23rem;
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: -0.02em;
-  text-align: left;
-  margin: 0;
-  padding: 0 2rem 2rem 2rem;
-}
-
-.buyNow__btnClose, .buyNow__btnClose--modifier {
+.buyNow__btnClose, .buyNow-send .buyNow__btnClose--modifier {
   position: absolute;
   top: 24px;
   margin-left: 55.2rem;
@@ -1000,7 +875,7 @@ p, .service__text, .product__text, .sellers__text {
   background: none;
   cursor: pointer;
 }
-.buyNow__btnClose:hover, .buyNow__btnClose--modifier:hover, .buyNow__btnClose:focus, .buyNow__btnClose--modifier:focus {
+.buyNow__btnClose:hover, .buyNow-send .buyNow__btnClose--modifier:hover, .buyNow__btnClose:focus, .buyNow-send .buyNow__btnClose--modifier:focus {
   outline: none;
   fill: rgb(253, 146, 34);
 }
@@ -1012,6 +887,48 @@ p, .service__text, .product__text, .sellers__text {
   padding-top: 4.8rem;
   padding-bottom: 5.8rem;
   border-radius: 2rem;
+}
+.buyNow .buyNow__title {
+  margin-bottom: 3.2rem;
+}
+.buyNow .buyNow__list {
+  width: 51.3rem;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+.buyNow .buyNow__list .buyNow__item {
+  width: 15.8rem;
+  height: 19.4rem;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 1.5rem;
+}
+.buyNow .buyNow__list .buyNow__item .buyNow__image {
+  margin: 2.4rem 2rem 1.4rem 2rem;
+}
+.buyNow .buyNow__list .buyNow__item:nth-child(3) img {
+  margin-top: 2rem;
+}
+.buyNow .buyNow__list .buyNow__item:hover {
+  transform: scale(1.05);
+}
+.buyNow .buyNow__list .buyNow__item .buyNow__btn {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 8px 27px 8px 27px;
+  border-radius: 100px;
+}
+.buyNow .buyNow__list .buyNow__item .buyNow__btn:hover, .buyNow .buyNow__list .buyNow__item .buyNow__btn:focus {
+  outline: none;
+  border: 1px solid rgb(253, 146, 34);
 }
 
 .backdrop {
@@ -1055,57 +972,13 @@ p, .service__text, .product__text, .sellers__text {
   pointer-events: 0;
 }
 
-.buyNow__title {
-  margin-bottom: 3.2rem;
-}
-
-.buyNow__list {
-  width: 51.3rem;
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  padding-bottom: 4rem;
-}
-
-.buyNow__item {
-  width: 15.8rem;
-  height: 19.4rem;
-  background: rgb(255, 255, 255);
-  border: 1px solid rgba(17, 17, 17, 0.1);
-  border-radius: 1.5rem;
-}
-.buyNow__item .buyNow__image {
-  margin: 2.4rem 2rem 1.4rem 2rem;
-}
-.buyNow__item:nth-child(3) img {
-  margin-top: 2rem;
-}
-.buyNow__item:hover {
-  transform: scale(1.05);
-}
-
-.buyNow__btn {
-  display: block;
-  margin: 0 auto;
-  border: 1px solid rgba(17, 17, 17, 0.1);
-  font-size: 1.4rem;
-  font-weight: 600;
-  padding: 8px 27px 8px 27px;
-  border-radius: 100px;
-}
-.buyNow__btn:hover, .buyNow__btn:focus {
-  outline: none;
-  border: 1px solid rgb(253, 146, 34);
-}
-
 .form {
   padding: 0 4.8rem 4.8rem 4.8rem;
 }
-
-.form__inputs {
+.form .form__title {
+  margin-bottom: 0.7rem;
+}
+.form .form__inputs {
   display: flex;
   flex-direction: "";
   justify-content: "";
@@ -1113,22 +986,20 @@ p, .service__text, .product__text, .sellers__text {
   box-shadow: 0px 5.4449152946px 5.4449152946px 0px rgba(0, 0, 0, 0.03);
   margin-bottom: 1.5rem;
 }
-
-.form__inputs--grid {
+.form .form__inputs input[type=email],
+.form .form__inputs input[type=number] {
+  flex: 1;
+}
+.form .form__inputs .form__input {
+  display: "inline-block";
+  background: rgb(250, 250, 250);
+}
+.form .form__inputs--grid {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
-}
-
-.form__title {
-  margin-bottom: 0.7rem;
-}
-
-input[type=email],
-input[type=number] {
-  flex: 1;
 }
 
 .form__span--svg {
@@ -1149,11 +1020,6 @@ input[type=number] {
   margin-right: 1.5rem;
 }
 
-.form__input {
-  display: "inline-block";
-  background: rgb(250, 250, 250);
-}
-
 .form__inputs--visa {
   display: flex;
   flex-direction: row;
@@ -1164,8 +1030,7 @@ input[type=number] {
   border-right: none;
   flex: 1;
 }
-
-.form__icon--visa {
+.form__inputs--visa .form__input .form__icon--visa {
   margin-right: 0 !important;
 }
 
@@ -1178,33 +1043,31 @@ input[type=number] {
   border: none;
   outline: none;
 }
-
-.form__inputs--svg .modal__icon {
+.form__inputs--svg .form__inputs--svg .modal__icon {
   margin: 0rem 1.8rem 0 0;
 }
 
-.form__input:hover, .form__input:focus, .form__input:focus-within,
-.form__inputs--svg:hover,
-.form__inputs--svg:focus,
-.form__inputs--svg:focus-within,
-.form__inputs--visa:hover,
-.form__inputs--visa:focus,
-.form__inputs--visa:focus-within {
+.form .form__input:hover, .form .form__input:focus, .form .form__input:focus-within,
+.form .form__inputs--svg:hover,
+.form .form__inputs--svg:focus,
+.form .form__inputs--svg:focus-within,
+.form .form__inputs--visa:hover,
+.form .form__inputs--visa:focus,
+.form .form__inputs--visa:focus-within {
   border: none;
   border: 1px solid rgb(253, 146, 34);
   border-radius: 1.3rem;
   cursor: pointer;
   outline: none;
 }
-
-.form__input--svg:hover, .form__input--svg:focus, .form__input--svg:focus-within {
+.form .form__input--svg:hover, .form .form__input--svg:focus, .form .form__input--svg:focus-within {
   border: none;
   border-radius: 1.3rem;
   cursor: pointer;
   outline: none;
 }
 
-.form__textarea {
+.form__textareas .form__textarea {
   width: 46.3rem;
   height: 9.1rem;
   padding: 2.2rem 2.4rem;
@@ -1223,18 +1086,23 @@ input[type=number] {
   text-align: left;
   margin-bottom: 1.5rem;
 }
-
-.form__submit {
-  width: unset;
-  padding: 14px 43.83px;
-}
-
-.form__textarea:hover, .form__textarea:focus, .form__textarea:focus-within {
+.form__textareas .form__textarea:hover, .form__textareas .form__textarea:focus, .form__textareas .form__textarea:focus-within {
   border: none;
   border: 1px solid rgb(253, 146, 34);
   border-radius: 0.4rem;
   cursor: pointer;
   outline: none;
+}
+.form__textareas .form__submit {
+  width: unset;
+  padding: 14px 43.83px;
+}
+.form__textareas .form__textarea--width {
+  display: block;
+  width: 38.7rem !important;
+}
+.form__textareas .form__submit--modifier {
+  padding: 14px 42.67px;
 }
 
 .buyNow-send {
@@ -1245,37 +1113,26 @@ input[type=number] {
   border-radius: 2rem;
   margin: 12.8rem auto;
 }
-
-.buyNow__title--modifier {
-  text-align: left;
-  margin-left: 4rem;
-}
-.buyNow__title--modifier span {
-  display: block;
-}
-
-.form--send {
-  padding: 0 4rem 0 4rem !important;
-}
-.form--send input[type=text] {
-  flex: 1;
-}
-
-.form__textarea--width {
-  display: block;
-  width: 38.7rem !important;
-}
-
-.form__submit--modifier {
-  padding: 14px 42.67px;
-}
-
-.buyNow__btnClose--modifier {
+.buyNow-send .buyNow__btnClose--modifier {
   display: block;
   margin-left: 46rem !important;
 }
+.buyNow-send .buyNow__title--modifier {
+  text-align: left;
+  margin-left: 4rem;
+  margin-bottom: 1.5rem;
+}
+.buyNow-send .buyNow__title--modifier span {
+  display: block;
+}
+.buyNow-send .form--send {
+  padding: 0 4rem 0 4rem !important;
+}
+.buyNow-send .form--send input[type=text] {
+  flex: 1;
+}
 
-.buyNow__btnClose, .buyNow__btnClose--modifier {
+.buyNow__btnClose, .buyNow-send .buyNow__btnClose--modifier {
   position: absolute;
   top: 24px;
   margin-left: 55.2rem;
@@ -1283,7 +1140,7 @@ input[type=number] {
   background: none;
   cursor: pointer;
 }
-.buyNow__btnClose:hover, .buyNow__btnClose--modifier:hover, .buyNow__btnClose:focus, .buyNow__btnClose--modifier:focus {
+.buyNow__btnClose:hover, .buyNow-send .buyNow__btnClose--modifier:hover, .buyNow__btnClose:focus, .buyNow-send .buyNow__btnClose--modifier:focus {
   outline: none;
   fill: rgb(253, 146, 34);
 }
@@ -1338,6 +1195,27 @@ textarea {
   margin-bottom: 1.5rem;
 }
 
+.footer__list-menu {
+  width: 53.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem 0 5rem 3.2rem;
+  list-style: none;
+}
+.footer__list-menu .footer__link-menu {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.428rem;
+  letter-spacing: -0.02em;
+  color: rgb(255, 255, 255);
+  outline: none;
+}
+.footer__list-menu .footer__link-menu:focus, .footer__list-menu .footer__link-menu:focus-within {
+  border: 0.05rem solid rgb(253, 146, 34);
+}
+
 .formSubscribe {
   width: 53.8rem;
   border-radius: 2rem;
@@ -1348,16 +1226,15 @@ textarea {
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
 }
-
-.formSubscribe__title {
+.formSubscribe .formSubscribe__title {
   padding-left: 4rem;
   margin: 4rem 0 2.8rem 0;
   text-align: left;
 }
-.formSubscribe__title span {
+.formSubscribe .formSubscribe__title span {
   display: block;
 }
-.formSubscribe__title span span {
+.formSubscribe .formSubscribe__title span span {
   display: inline;
   color: rgb(17, 17, 17);
 }
@@ -1399,4 +1276,41 @@ textarea {
   padding: 1.5rem 2.7rem;
   font-size: 1.8rem;
   border-radius: 100px;
+}
+
+.carousel {
+  width: 10.6rem;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 21rem;
+  margin: 0 auto;
+}
+.carousel .carousel__item {
+  display: block;
+  width: 1.3rem;
+  height: 1.3rem;
+  background: rgba(17, 17, 17, 0.1);
+  border-radius: 0.65rem;
+}
+.carousel .carousel__item:first-child {
+  width: 2.8rem;
+  background: rgb(253, 146, 34);
+}
+
+.service__pseudoBarra {
+  position: relative;
+}
+.service__pseudoBarra::after {
+  content: "";
+  position: absolute;
+  width: 12.4rem;
+  height: 0.1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  top: 4rem;
+  left: -12.5rem;
+  border-radius: 0.2rem;
+  transform: rotate(-90deg);
 }/*# sourceMappingURL=main.css.map */

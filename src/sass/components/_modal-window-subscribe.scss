@@ -10,17 +10,16 @@
   }
   padding-bottom: 4rem;
   margin-bottom: 4rem;
-}
-
-.formSubscribe__title {
-  padding-left: 4rem;
-  margin: 4rem 0 2.8rem 0;
-  text-align: left;
-  span {
-    display: block;
+  .formSubscribe__title {
+    padding-left: 4rem;
+    margin: 4rem 0 2.8rem 0;
+    text-align: left;
     span {
-      display: inline;
-      color: $secondary-color;
+      display: block;
+      span {
+        display: inline;
+        color: $secondary-color;
+      }
     }
   }
 }

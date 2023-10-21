@@ -2,7 +2,6 @@
 @import './utils/mixins';
 @import './sections/header';
 @import './sections/imagen_hero';
-@import './components/menu';
 @import './components/text';
 @import './components/btnScroll';
 @import './components/btn-hero';
@@ -23,4 +22,7 @@
 @import './components/input';
 @import './components/input-svg';
 @import './components/textarea';
-@import './sections/formSuscribe';
+@import './components/navbar-footer';
+@import './components/modal-window-subscribe';
+@import './components/carousel';
+@import './components/pseudoBarra-vertical';

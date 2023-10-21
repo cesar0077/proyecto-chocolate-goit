@@ -1,0 +1,17 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.service__pseudoBarra {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 12.4rem;
+    height: 0.1rem;
+    background-color: $color-text;
+    top: 4rem;
+    left: -12.5rem;
+    border-radius: 0.2rem;
+    transform: rotate(-90deg);
+  }
+}
